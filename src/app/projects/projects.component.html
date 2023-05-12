@@ -1,0 +1,11 @@
+<div class="project" *ngFor="let project of projects">
+  <div class="project-title">{{ project.title }}</div>
+  <div class="project-description">{{ project.description }}</div>
+  <div class="project-technologies">
+    <strong>Technologies:</strong> {{ project.technologies }}
+  </div>
+  <img class="project-image" [src]="project.image" alt="Project Image">
+  <div class="project-link">
+    <a *ngIf="project.github" [href]="project.github" target="_blank">GitHub Repository</a>
+  </div>
+</div>
